@@ -4,4 +4,4 @@
 
 using namespace std;
 
-RandomAffirmation::RandomAffirmation(string filename): Affirmation(filename)
+RandomAffirmation::RandomAffirmation(string filename) : Affirmation(filename){}
