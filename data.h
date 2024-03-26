@@ -2,5 +2,6 @@
 #define DATA_H
 
 void pokazAktualnyDzien();
+int DzienRoku();
 
 #endif 
