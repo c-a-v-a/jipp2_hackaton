@@ -9,9 +9,9 @@ using namespace std;
 
 class DailyAffirmation : public Affirmation {
     private:
-        unsigned int current_day_;
+        int current_day_;
     public:
-        DialyAffirmation(string filename, unsigned int current_day);
+        DailyAffirmation(string filename, int current_day);
 
         string GetAffirmation() override;
 };

@@ -13,7 +13,7 @@ enum ProgramMode {
     Error
 };
 
-int parse_args(char *argv[]) {
+ProgramMode parse_args(char *argv[]) {
     string arg = argv[1];
 
     if (arg == "-d" || arg == "--daily")

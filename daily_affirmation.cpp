@@ -1,13 +1,14 @@
-#include "dialy_affirmation.h"
+#include "daily_affirmation.h"
 
 #include <string>
+#include <fstream>
 
 using namespace std;
 
-DialyAffirmation::DialyAffirmation(string filename, unsigned int current_day):
+DailyAffirmation::DailyAffirmation(string filename, int current_day):
     Affirmation(filename), current_day_(current_day) {}
 
-string DialyAffirmation::getAffirmationForDay() {
+string DailyAffirmation::GetAffirmation() {
     
     ifstream file(filename_);
     if (!file.is_open()) {
@@ -16,7 +17,7 @@ string DialyAffirmation::getAffirmationForDay() {
 
     
     string line;
-    for (unsigned int i = 1; i <= current_day_; ++i) {
+    for (int i = 1; i <= current_day_; ++i) {
         if (!getline(file, line)) {
             return "Error: Day out of range.";
         }
